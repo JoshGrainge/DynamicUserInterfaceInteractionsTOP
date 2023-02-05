@@ -5,6 +5,10 @@
   --dropdown-width: 100px;
 
   --header-height: 75px;
+
+  --button-color: #fff;
+  --button-hover-color: rgb(196, 196, 196);
+  --button-click-color: rgb(141, 141, 141);
 }
 
 * {
@@ -105,6 +109,59 @@ header {
 a:hover,
 .more:hover {
   color: red;
+}
+
+/* Slideshow section */
+.slideshow-container {
+  width: 1280px;
+  height: 720px;
+  background-color: black;
+  margin: 20px auto;
+  position: relative;
+}
+
+.picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.current {
+  z-index: 1;
+}
+
+.button-container {
+  width: 200px;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5%;
+
+  display: flex;
+  justify-content: space-between;
+
+  z-index: 2;
+}
+
+.button-container > button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+}
+
+.button-container > button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.button-container > button:active {
+  background-color: var(--button-click-color);
+}
+
+.button-container > button.current {
+  background-color: var(--button-click-color);
 }
 
 /* Universal show class */
