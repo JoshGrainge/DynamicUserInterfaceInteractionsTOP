@@ -1,0 +1,56 @@
+:root {
+  --main-color: rgb(36, 36, 36);
+  --accent-color: rgb(22, 22, 22);
+
+  --dropdown-width: 100px;
+}
+
+* {
+  color: white;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  width: var(--dropdown-width);
+}
+
+.menu {
+  visibility: hidden;
+  background-color: var(--main-color);
+  border: 5px solid var(--accent-color);
+  border-radius: 10px;
+  color: white;
+  width: var(--dropdown-width);
+}
+
+.dropdown-button {
+  background-color: var(--main-color);
+  padding: 10px;
+  border: none;
+  width: 100px;
+  width: var(--dropdown-width);
+}
+
+.menu > a {
+  display: block;
+  padding: 10px;
+}
+
+.menu > a:hover {
+  background-color: #6a6a6a82;
+  cursor: pointer;
+}
+
+.menu > a:active {
+  background-color: #3f3f3fb6;
+}
+
+.selected {
+  width: 100%;
+  display: inline;
+  background-color: rgba(255, 255, 255, 0.445);
+}
+
+.show {
+  visibility: visible;
+}
